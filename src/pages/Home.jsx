@@ -1,7 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { connect } from "react-redux";
 
 import { fetchActiveUser } from "store/user/user-actions";
+import Navbar from "../components/common/Navbar";
+import HomeDetail from "../components/pages/home/HomeDetail";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -14,7 +16,13 @@ class Home extends React.Component {
 
   render() {
     const { user } = this.props;
-    return <div>Hello {user.name}</div>;
+    return (
+      <Fragment>
+        <Navbar />
+        <div>Hello {user.name}</div>
+        <HomeDetail />
+      </Fragment>
+    );
   }
 }
 
