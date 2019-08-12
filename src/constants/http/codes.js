@@ -1,4 +1,4 @@
-export const CODES = {
+export default {
   SUCCESS: 200,
   CREATED: 201,
   DELETED: 204,

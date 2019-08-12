@@ -5,11 +5,7 @@ const urls = config.urls.user;
 
 export default {
   getActiveUser() {
-    const { data } = {
-      data: {
-        name: "Wincent"
-      }
-    };
+    const data = httpHandler.getRequest(urls.getActiveUser);
     return data;
   }
 };
