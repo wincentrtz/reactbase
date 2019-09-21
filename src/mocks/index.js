@@ -23,6 +23,8 @@ data.forEach(d => {
     case "PUT" || "POST":
       params.push(d.body);
       break;
+    default:
+      break;
   }
   mock[methodMap[d.method]](...params).reply(CODES.SUCCESS, d);
 });
