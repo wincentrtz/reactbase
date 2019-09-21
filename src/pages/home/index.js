@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
-import { fetchActiveUser } from "store/user/user-actions";
+import { fetchActiveUser } from "store/user/actions";
 import Navbar from "components/common/Navbar";
 import HomeDetailSection from "components/pages/home/home-detail-section";
 import { HomePageContainer, GreetingContent } from "./style";

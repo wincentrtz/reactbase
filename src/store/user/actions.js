@@ -1,5 +1,5 @@
 import api from "api/controllers/user";
-import { FETCH_ACTIVE_USER } from "./user-constants";
+import { FETCH_ACTIVE_USER } from "./constants";
 
 export const fetchActiveUser = () => async dispatch => {
   const { data } = await api.getActiveUser();

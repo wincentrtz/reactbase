@@ -1,5 +1,5 @@
-import { FETCH_ACTIVE_USER } from "./user-constants";
-import userState from "./user-state";
+import { FETCH_ACTIVE_USER } from "./constants";
+import userState from "./state";
 
 const userReducers = (state = userState, action) => {
   switch (action.type) {

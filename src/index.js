@@ -7,7 +7,11 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import store from "store";
 
-require("mocks");
+const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
+if (IS_DEVELOPMENT) require("mocks");
+
+require("utils/request-interceptor");
+require("utils/response-interceptor");
 
 ReactDOM.render(
   <Provider store={store}>
