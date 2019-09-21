@@ -1,9 +1,7 @@
 import instance from "api";
 
 instance.interceptors.response.use(
-  response => {
-    return response;
-  },
+  response => response,
   error => {
     if (error.response && error.response.data) {
       //handler error
