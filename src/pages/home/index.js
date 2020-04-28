@@ -5,6 +5,7 @@ import { fetchActiveUser } from "store/user/actions";
 import Navbar from "components/common/navbar";
 import HomeDetailSection from "components/pages/home/home-detail-section";
 import { HomePageContainer, GreetingContent } from "./style";
+import Axios from "axios";
 
 const HomePage = ({ fetchActiveUser, user }) => {
   useEffect(() => {
