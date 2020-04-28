@@ -5,7 +5,6 @@ import { fetchActiveUser } from "store/user/actions";
 import Navbar from "components/common/navbar";
 import HomeDetailSection from "components/pages/home/home-detail-section";
 import { HomePageContainer, GreetingContent } from "./style";
-import Axios from "axios";
 
 const HomePage = ({ fetchActiveUser, user }) => {
   useEffect(() => {
@@ -22,17 +21,14 @@ const HomePage = ({ fetchActiveUser, user }) => {
 
 const mapStateToProps = ({ userReducers }) => {
   return {
-    user: userReducers.user
+    user: userReducers.user,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    fetchActiveUser: () => dispatch(fetchActiveUser())
+    fetchActiveUser: () => dispatch(fetchActiveUser()),
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HomePage);
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
