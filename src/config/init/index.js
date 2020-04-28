@@ -1,9 +1,10 @@
 import env from "constants/env";
 import requestInterceptor from "utils/request-interceptor";
 import responseInterceptor from "utils/response-interceptor";
+import mocks from 'mocks'
+
 export default () => {
-  console.log(process.env.REACT_APP_STATE);
-  if (process.env.REACT_APP_STATE === env.DEVNOMOCK) require("mocks");
+  if (process.env.REACT_APP_STATE === env.DEV) mocks()
   requestInterceptor();
   responseInterceptor();
 };

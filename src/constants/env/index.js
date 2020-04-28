@@ -1,4 +1,4 @@
 export default {
   DEV: "development",
-  DEVNOMOCK: "developmentnomock",
+  DEVNOMOCK: "development-no-mock",
 };

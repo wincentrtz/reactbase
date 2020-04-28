@@ -15,8 +15,8 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "start": "cross-env REACT_APP_STATE=development react-scripts start",
-    "no-mock": "cross-env REACT_APP_STATE=developmentnomock react-scripts start",
+    "start": "REACT_APP_STATE=development react-scripts start",
+    "dev-no-mock": "REACT_APP_STATE=development-no-mock react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
