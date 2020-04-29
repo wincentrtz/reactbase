@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   DEV: "development",
-  DEVNOMOCK: "development-no-mock",
+  DEV_NO_MOCK: "development-no-mock",
 };

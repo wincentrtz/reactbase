@@ -1,13 +1,18 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
-module.exports = function (app) {
+const env = require("./constants/env/index");
+
+const devProxy = function (app) {
   app.use(
-    "/api",
+    "/apis",
     createProxyMiddleware({
-      target: "http://localhost:3000",
+      target: "https://jsonplaceholder.typicode.com/posts",
       changeOrigin: true,
       pathRewrite: {
-        "^/api": "",
+        "^/apis": "",
       },
     })
   );
 };
+
+module.exports =
+  process.env.REACT_APP_STATE === env.DEV_NO_MOCK ? devProxy : () => {};
