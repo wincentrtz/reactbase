@@ -3,12 +3,12 @@ const env = require("./constants/env/index");
 
 const devProxy = function (app) {
   app.use(
-    "/apis",
+    "/api",
     createProxyMiddleware({
-      target: "https://jsonplaceholder.typicode.com/posts",
+      target: "http://localhost:3000",
       changeOrigin: true,
       pathRewrite: {
-        "^/apis": "",
+        "^/api": "",
       },
     })
   );
