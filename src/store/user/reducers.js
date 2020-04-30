@@ -6,7 +6,7 @@ const userReducers = (state = userState, action) => {
     case FETCH_ACTIVE_USER:
       return {
         ...state,
-        user: action.payload.data
+        user: action.payload.data,
       };
     default:
       return state;
