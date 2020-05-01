@@ -14,7 +14,7 @@ const methodMap = {
   DELETE: "onDelete"
 };
 
-data.forEach(d => {
+export default () => data.forEach(d => {
   const params = [d.url];
   switch (d.method) {
     case "GET":

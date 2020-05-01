@@ -6,12 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import store from "store";
+import init from "config/init";
 
-const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
-if (IS_DEVELOPMENT) require("mocks");
-
-require("utils/request-interceptor");
-require("utils/response-interceptor");
+init();
 
 ReactDOM.render(
   <Provider store={store}>

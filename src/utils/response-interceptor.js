@@ -1,11 +1,12 @@
 import instance from "api";
 
-instance.interceptors.response.use(
-  response => response,
-  error => {
-    if (error.response && error.response.data) {
-      //handler error
+export default () =>
+  instance.interceptors.response.use(
+    (response) => response,
+    (error) => {
+      if (error.response && error.response.data) {
+        //handler error
+      }
+      return Promise.reject(error.message);
     }
-    return Promise.reject(error.message);
-  }
-);
+  );
