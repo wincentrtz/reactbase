@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "pages/home";
 import ProtectedRoute from "./components/common/protected-route";
-import globalStyleWrapper from "./components/common/global-style-wrapper"
 
 const App = () => {
   return (
@@ -14,4 +13,4 @@ const App = () => {
   );
 };
 
-export default globalStyleWrapper(App);
+export default App;
