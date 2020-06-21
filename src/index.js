@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
+import { GlobalStyleComponent } from "./style"
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -15,6 +16,7 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    <GlobalStyleComponent />
   </Provider>,
   document.getElementById("root")
 );
