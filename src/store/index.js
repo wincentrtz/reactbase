@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 import userReducers from "./user/reducers";
 
 const rootReducer = combineReducers({
-  userReducers
+  userReducers,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

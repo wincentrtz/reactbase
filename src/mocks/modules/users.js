@@ -9,8 +9,8 @@ const getActiveUser = {
   code: CODES.SUCCESS,
   method: METHODS.GET,
   data: {
-    name: "Wincent"
-  }
+    name: "Wincent",
+  },
 };
 
 export default [getActiveUser];

@@ -7,5 +7,5 @@ export default {
   getActiveUser() {
     const data = httpHandler.getRequest(urls.getActiveUser);
     return data;
-  }
+  },
 };
