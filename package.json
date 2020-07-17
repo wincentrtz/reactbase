@@ -22,6 +22,11 @@
     "eject": "react-scripts eject",
     "test:coverage": "npm run test -- --coverage  --watchAll=false"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
