@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
-import { GlobalStyleComponent } from "./style"
+import { GlobalStyleComponent } from "./style";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -13,9 +12,7 @@ init();
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <App />
     <GlobalStyleComponent />
   </Provider>,
   document.getElementById("root")

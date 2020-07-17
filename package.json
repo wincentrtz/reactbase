@@ -19,7 +19,8 @@
     "dev-no-mock": "REACT_APP_STATE=development-no-mock react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:coverage": "npm run test -- --coverage  --watchAll=false"
   },
   "husky": {
     "hooks": {
@@ -42,8 +43,6 @@
     ]
   },
   "devDependencies": {
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1"
+    "redux-mock-store": "^1.5.4"
   }
 }
